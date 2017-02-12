@@ -3,7 +3,7 @@ filetype off                  " required
 
 " Use Unix as the standard file type (WINDOWS USE)
 "set ffs=dos,unix,mac
-" Use Unix as the standard file type (WINDOWS USE)
+" Use Unix as the standard file type (Unix use)
 set ffs=unix,dos,mac
 
 
@@ -12,6 +12,14 @@ syntax enable
 
 " Show line numbers
 set number
+
+" Enable mouse
+set mouse=a
+
+" Preview for explorer
+let g:netrw_preview   = 1
+let g:netrw_liststyle = 3
+let g:netrw_winsize   = 30
 
 " Show cmds
 set showcmd
@@ -25,4 +33,4 @@ set nocompatible
 
 " ***MAPPINGS***
 " Copy/Paste
-map <C-c> "+y
+" map <C-c> "+y
