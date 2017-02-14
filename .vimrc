@@ -1,3 +1,5 @@
+cd /cygdrive/c/Users/mikhail.lyshkov/Documents/
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -31,12 +33,26 @@ set hlsearch " highliting the results
 " Command autocomplete
 set nocompatible
 
+" Lines before and after the founded line (search)
+set scrolloff=7
+
+" Russian language mappings
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Cyan
+setlocal spell spelllang=ru_yo,en_us
+
 " ***MAPPINGS***
-" Copy/Paste
- map <C-c> "+y
+" Working with buffers
+nnoremap <C-Right> :bnext<CR>
+nnoremap <C-Left> :bprevious<CR>
+nnoremap <C-Up> :buffers<CR>
 
 " Working with tabs
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-S-PageUp> :tabnew<CR>
+nnoremap <C-S-PageDown> :tabclose<CR>
+nnoremap <C-PageDown> :tabprevious<CR>
+nnoremap <C-PageUp> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
