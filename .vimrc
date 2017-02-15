@@ -1,13 +1,34 @@
 cd /cygdrive/c/Users/mikhail.lyshkov/Documents/
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype on                 " filetype must be 'on' before setting it 'off'
+                            "   otherwise it exits with a bad status and
+                            "   breaks git commit.
+filetype off                " force reloading *after* pathogen loaded
+
+
+" Tab to spaces!
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 
 " Use Unix as the standard file type (WINDOWS USE)
 "set ffs=dos,unix,mac
 " Use Unix as the standard file type (Unix use)
 set ffs=unix,dos,mac
 
+" Two status lines
+set laststatus=2
+
+" Easy opening files
+set wildmenu
+
+" Switching between buffers without saving
+set hidden
 
 " Enable syntax highliting
 syntax enable
@@ -18,12 +39,7 @@ set number
 " Enable mouse
 set mouse=a
 
-" Preview for explorer
-let g:netrw_preview   = 1
-let g:netrw_liststyle = 3
-let g:netrw_winsize   = 30
-
-" Show cmds
+" Show cmd
 set showcmd
 
 " Search
@@ -43,10 +59,15 @@ set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 setlocal spell spelllang=ru_yo,en_us
 
+" Preview for explorer
+let g:netrw_preview   = 1
+let g:netrw_liststyle = 3
+let g:netrw_winsize   = 30
+
 " ***MAPPINGS***
 " Working with buffers
-nnoremap <C-Right> :bnext<CR>
-nnoremap <C-Left> :bprevious<CR>
+nnoremap <C-Right> :bnext !<CR>
+nnoremap <C-Left> :bprevious !<CR>
 nnoremap <C-Up> :buffers<CR>
 
 " Working with tabs
