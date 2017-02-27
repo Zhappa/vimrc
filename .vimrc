@@ -1,4 +1,4 @@
-cd /cygdrive/c/Users/mikhail.lyshkov/Documents/
+"cd /cygdrive/c/Users/mikhail.lyshkov/Documents/
 
 set nocompatible              " be iMproved, required
 filetype on                 " filetype must be 'on' before setting it 'off'
@@ -53,11 +53,11 @@ set nocompatible
 set scrolloff=7
 
 " Russian language mappings
-set keymap=russian-jcukenwin
+"set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
-setlocal spell spelllang=ru_yo,en_us
+"setlocal spell spelllang=ru_yo,en_us
 
 " Preview for explorer
 let g:netrw_preview   = 1
@@ -66,8 +66,8 @@ let g:netrw_winsize   = 30
 
 " ***MAPPINGS***
 " Working with buffers
-nnoremap <C-Right> :bnext !<CR>
-nnoremap <C-Left> :bprevious !<CR>
+nnoremap <C-Right> :bnext<CR>
+nnoremap <C-Left> :bprevious<CR>
 nnoremap <C-Up> :buffers<CR>
 
 " Working with tabs
